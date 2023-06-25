@@ -20,7 +20,7 @@
   }
   
   .calculator {
-    width: 400px;
+    width: 500px; 
     padding: 20px;
     background-color: var(--background-color);
     border: 1px solid var(--text-color);
@@ -35,10 +35,9 @@
     background-color: var(--secondary-color);
   }
   
-/* all button styles */
   .btn-calculator {
-    width: calc(33.33% - 10px);  /* btn edits */
-    height: 80px;  /* btn edits */
+    width: calc(20% - 10px); 
+    height: 80px;
     font-size: 20px;
     color: var(--text-color);
     background-color: var(--primary-color);
@@ -50,26 +49,30 @@
     width: calc(100% + 10px);
     height: 90%;
   }
+  
   .btn-calculator.clear {
     background-color: var(--primary-color);
-    width: calc(100% + 10px);
+    width: calc(100% + 10px); 
   }
+  
   .btn-calculator.operator {
+    width: calc(100% + 10px);
     background-color: var(--secondary-color);
-    width: calc(100% + 10px);
   }
+  
   .btn-calculator.number {
+    width: calc(100% + 10px);
     background-color: var(--accent-color);
+  }
+  
+  .btn-calculator.number.long {
+    grid-column: span 2;
     width: calc(100% + 10px);
   }
-  .btn-calculator.number.long {
-    grid-column: span 2; /* Make the "0" button two columns */
-    width: calc(100% + 10px); /* Adjust the width to match the other buttons */
-}
-
-  .btn-calculator.number:hover,.btn-calculator.number.long:hover,.btn-calculator.operator:hover ,.btn-primary.btn-block:hover ,.btn-calculator.clear:hover{
-    background-color: var(--background-color);
+  
+  .btn-calculator:hover {
     width: calc(100% + 10px);
+    background-color: var(--background-color);
   }
   
   
