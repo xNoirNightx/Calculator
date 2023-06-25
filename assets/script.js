@@ -5,11 +5,13 @@ const equalButton = document.querySelector(".btn-primary");
 
 // listerns 
 buttons.forEach(button => {
-    button.removeEventListener("click", handleButtonClick); // Remove existing event listener
-    button.addEventListener("click", handleButtonClick); // Add new event listener
+    button.removeEventListener("click", handleButtonClick); 
+    button.addEventListener("click", handleButtonClick);
   });
   
+// clear and equal functions to display
   equalButton.addEventListener("click", calculate);
+  clearButton.addEventListener("click", clearDisplay);
   
 //    add function to stop duplication
   function handleButtonClick() {
