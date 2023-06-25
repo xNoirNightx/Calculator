@@ -9,9 +9,16 @@ buttons.forEach(button => {
     button.addEventListener("click", handleButtonClick);
   });
   
-// clear and equal functions to display
+// clear and equal functions to display *** add for all operations ***
   equalButton.addEventListener("click", calculate);
   clearButton.addEventListener("click", clearDisplay);
+  sqrtButton.addEventListener("click", calculateSquareRoot);
+  exponentButton.addEventListener("click", calculateExponent);
+
+//   scientific functions , parse ?
+function calculateSquareRoot() {}
+function calculateExponent() {}
+
   
 //    add function to stop duplication
   function handleButtonClick() {
