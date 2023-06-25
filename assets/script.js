@@ -5,23 +5,20 @@ const equalButton = document.querySelector(".btn-primary");
 
 // listerns 
 buttons.forEach(button => {
-    button.addEventListener("click", () => {
-      display.value += button.textContent;
-    });
+    button.removeEventListener("click", handleButtonClick); // Remove existing event listener
+    button.addEventListener("click", handleButtonClick); // Add new event listener
   });
   
-  equalButton.addEventListener("click", () => {
-    try {
-      display.value = eval(display.value);
-    } catch (error) {
-      display.value = "Error";
-    }
-  });
+  equalButton.addEventListener("click", calculate);
+  
+//    add function to stop duplication
+  function handleButtonClick() {
+    const value = this.textContent;
+    display.value += value;
+  }
 
- 
-  buttons.forEach(button => button.addEventListener("click", () => display.value += button.textContent));
-  
-  equalButton.addEventListener("click", () => {
+//   local storage
+  function calculate() {
     try {
       const result = eval(display.value);
       display.value = result;
@@ -30,5 +27,5 @@ buttons.forEach(button => {
       display.value = "Error";
       localStorage.removeItem("calculatorResult");
     }
-  });
+  }
   
