@@ -1,0 +1,75 @@
+:root {
+    --primary-color: #f6a19a; /* Dark pink */
+    --secondary-color: #feceb8; /* Peach */
+    --background-color: #acd0c2; /* Mint green */
+    --text-color: #dce2d6; /* Pale green */
+    --accent-color: #fff4e2; /* Pale beige */
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url(./images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+  }
+  
+  .calculator {
+    width: 400px;
+    padding: 20px;
+    background-color: var(--background-color);
+    border: 1px solid var(--text-color);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  #display {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+  }
+  
+/* all button styles */
+  .btn-calculator {
+    width: calc(33.33% - 10px);  /* btn edits */
+    height: 80px;  /* btn edits */
+    font-size: 20px;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    margin: 5px;
+  }
+  
+  .btn-primary.btn-block {
+    background-color: var(--primary-color);
+    width: calc(100% + 10px);
+    height: 90%;
+  }
+  .btn-calculator.clear {
+    background-color: var(--primary-color);
+    width: calc(100% + 10px);
+  }
+  .btn-calculator.operator {
+    background-color: var(--secondary-color);
+    width: calc(100% + 10px);
+  }
+  .btn-calculator.number {
+    background-color: var(--accent-color);
+    width: calc(100% + 10px);
+  }
+  .btn-calculator.number.long {
+    grid-column: span 2; /* Make the "0" button two columns */
+    width: calc(100% + 10px); /* Adjust the width to match the other buttons */
+}
+
+  .btn-calculator.number:hover,.btn-calculator.number.long:hover,.btn-calculator.operator:hover ,.btn-primary.btn-block:hover ,.btn-calculator.clear:hover{
+    background-color: var(--background-color);
+    width: calc(100% + 10px);
+  }
+  
+  
