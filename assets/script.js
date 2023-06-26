@@ -15,9 +15,20 @@ buttons.forEach(button => {
   sqrtButton.addEventListener("click", calculateSquareRoot);
   exponentButton.addEventListener("click", calculateExponent);
 
+// clear
+  function clearDisplay() {
+    display.value = "";
+  }
+
 //   scientific functions , parse ?
-function calculateSquareRoot() {}
-function calculateExponent() {}
+function calculateSquareRoot() {
+    const value= parseFloat(display.value);
+    if ()
+}
+function calculateExponent() {
+    const value= parseFloat(display.value);
+    if ()
+}
 
   
 //    add function to stop duplication
