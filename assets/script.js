@@ -23,15 +23,24 @@ buttons.forEach(button => {
     display.value = "";
   }
 
-// //   scientific functions , parse ?
-// function calculateSquareRoot() {
-//     const value= parseFloat(display.value);
-//     if ()
-// }
-// function calculateExponent() {
-//     const value= parseFloat(display.value);
-//     if ()
-// }
+//   scientific functions , parse ?
+function calculateSquareRoot() {
+    const value = parseFloat(display.value);
+    if (!isNaN(value)) {
+      const result = Math.sqrt(value);
+      display.value = result;
+      localStorage.setItem("calculatorResult", result);
+    }
+  }
+  
+  function calculateExponent() {
+    const value = parseFloat(display.value);
+    if (!isNaN(value)) {
+      const result = Math.pow(value, 2);
+      display.value = result;
+      localStorage.setItem("calculatorResult", result);
+    }
+  }
 
   
 //    add function to stop duplication
@@ -45,6 +54,7 @@ buttons.forEach(button => {
     try {
       const result = eval(display.value);
       display.value = result;
+
       localStorage.setItem("calculatorResult", result);
     } catch (error) {
       display.value = "Error";
