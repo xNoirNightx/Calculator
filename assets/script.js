@@ -2,6 +2,9 @@
 const display = document.getElementById("display");
 const buttons = document.querySelectorAll(".btn-calculator");
 const equalButton = document.querySelector(".btn-primary");
+const clearButton = document.querySelector(".clear");
+const sqrtButton = document.querySelector(".sqrt");
+const exponentButton = document.querySelector(".exponent");
 
 // listerns 
 buttons.forEach(button => {
@@ -20,15 +23,15 @@ buttons.forEach(button => {
     display.value = "";
   }
 
-//   scientific functions , parse ?
-function calculateSquareRoot() {
-    const value= parseFloat(display.value);
-    if ()
-}
-function calculateExponent() {
-    const value= parseFloat(display.value);
-    if ()
-}
+// //   scientific functions , parse ?
+// function calculateSquareRoot() {
+//     const value= parseFloat(display.value);
+//     if ()
+// }
+// function calculateExponent() {
+//     const value= parseFloat(display.value);
+//     if ()
+// }
 
   
 //    add function to stop duplication
